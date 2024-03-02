@@ -12,8 +12,6 @@ execute 'source' g:path_to_upserv_foundations_vim . 'vim/comma_mappings.vim'
 ```
 3. alternatively include all vim mappings 
 ```
-" Path to upserv cusotomizations (adjust as needed)
-let g:path_to_upserv_foundations_vim = '~/.upserv_foundations_vim/'
 " Include all upserv_foundations_vim mappings 
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/manifest.vim'
 ```
@@ -29,5 +27,12 @@ execute 'source' g:path_to_upserv_foundations_vim . 'vim/vim_mappings.vim'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/space_mappings.vim'
 " Include language specific / Rails / 'comma' mappings
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/comma_mappings.vim'
+```
+5. If necessary, you can customize the location. Ex
+```
+" Path to upserv cusotomizations (adjust as needed).
+let g:path_to_upserv_foundations_vim = '~/.upserv_foundations_vim/'
+execute 'source' g:path_to_upserv_foundations_vim . 'vim/comma_mappings.vim'
+
 ```
 5. Test if the mapping work
