@@ -2,7 +2,7 @@ clone repo to dotfile in home directory
 ```
 git clone git@github.com:upserv-io/upserv_foundations_vim.git ~/.upserv_foundations_vim
 ```
-Add main mappiings to vimrc:
+Add language specific mappiings to vimrc:
 ```
 " Include upserv_foundations_vim language specific comma mappings
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
