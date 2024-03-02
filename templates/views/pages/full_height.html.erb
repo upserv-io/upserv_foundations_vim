@@ -1,0 +1,25 @@
+<% provide(:sub_title, 'ChangeSubTitle') %>
+<%# DeleteThis - include top_bar_nav or remove this %>
+<% provide(:top_bar_nav, 'ChangeTopBarNav') %>
+<%# DeleteThis - NOTE: page body columns does not use page_max_width. Max width is set to 100% for header and body %>
+<%= add_template_streams %>
+
+
+<%# DeleteThis -  page_header and page_body_columns should only be used in templates and not rendered in partials 
+    because if you render in a partial, you might be tempted to re-render via ajax however, 
+    this doesn't work well with page_header and page_body because we are setting the width using
+    provide and yield which will not be available when rendering via ajax %>
+<%# DeleteThis - for custom header, use: ,hphe (Html Card HEader) %>
+<%= page_header title: 'ChangeTitle', subtitle: 'ChangeSubTitle' %>
+<%= page_body_columns do %>
+  <%# DeleteThis - fixed width MUST include "flex: none;" %>
+  <%= page_body_column style: 'flex: none; width: ChangeWidthrem;' do %>
+  <% end %>
+  <%# DeleteThis - fluid width. Set to 100% to take all remaining space; DO NOT use tailwind for width (ex. w-full, etc.) %>
+  <%= page_body_column style: 'width: ChangeWidth%;' do %>
+  <% end %>
+<% end %>
+
+<%# Modals %>
+<div id="modals">
+</div>

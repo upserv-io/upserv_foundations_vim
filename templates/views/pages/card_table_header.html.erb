@@ -1,0 +1,13 @@
+<%= table_card_header do %>
+  <%= card_header_title_row do %>
+    <%# DeleteThis - for custom title (and subtitle), use: ,hctc (Html Card Title Container) %>
+    <%= card_header_title_container title: 'ChangeTitle', subtitle: 'ChangeSubTitle' %>
+    <%= card_header_action_buttons do %>
+      ChangeActionButtons
+    <% end %>
+  <% end %>
+  <%= card_header_controls do %>
+    <%= search_bar :ChangePathHelper, ChangePathHelperArgOrArrayOfArgs, placeholder: 'ChangePlaceholder' %>
+    <%# DeleteThis - insert dropdowns, filters, etc. as needed %>
+  <% end %>
+<% end %>

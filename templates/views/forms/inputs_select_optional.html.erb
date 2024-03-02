@@ -1,0 +1,15 @@
+<%= f.select(
+  :ChangeMethod,
+  # DeleteThis - even if object.attribute has a value, the selected value must be set manually.
+  # Typically options_for_select is the best option (,hios) or options for enum (,hioe) or options grouped (,hiog)
+  ChangeOptionsList,
+  # DeleteThis - include_blank is best when a selection is not requried and can be left blank. It will add an option to the beginning of the list with value="" regardless of the value of object.attribute
+  { include_blank: 'Select' },
+  {
+    class: 'form-control',
+    autofocus: ChangeOrRemove,
+    disabled: ChangeOrRemove,
+    multiple: ChangeOrRemove,
+    readonly: ChangeOrRemove,
+  })
+ %>

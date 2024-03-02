@@ -1,0 +1,22 @@
+<%# DeleteThis
+    common options: 
+      stacked - defaults to false (ie inline). Set to true to stack the radio buttons
+      label_width - defaults to 20rem (ie 5rem). Must be a tailwind class
+      group_width - defaults to nil (which means it will be the full width of the form). Must be a tailwind class
+    
+    less common options:
+      no_label - defaults to false. set to true to remove the label (also you will need to remove the ChangeLabel arg below)
+      top_label - defaults to false. set to true to put the label above the input
+      label_options - defaults to {}. set to options for the label
+      inline_errors - defaults to true. set to false to remove inline errors
+      inline_errors_options - defaults to {}. set to options for inline errors
+%>
+<%= f.input_group 'ChangeLabel', radio: true do %>
+  <%= f.radio_button_contained :ChangeMethod, ChangeValue,
+          label: ChangeOrRemove, # defaults to "#{ChangeValue.to_s.titleize}:"
+          autofocus: ChangeOrRemove,
+          checked: ChangeOrRemove, # DeleteThis - only include checked if value cannot be automated from the form model
+          disabled: ChangeOrRemove,
+          required: ChangeOrRemove
+  %>
+<% end %>

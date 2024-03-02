@@ -1,0 +1,14 @@
+<%= modal id: "ChangeModel-#{ChangeModel.id}-ChangeSubControllerNameOrRemoveThis-destroy-modal" do %>
+  <div id="ChangeModel-<%= ChangeModel.id %>-ChangeSubControllerNameOrRemoveThis-destroy-modal-flash" class="flash-messages"></div>
+  <%# DeleteThis - add subtitle with this option - subtitle: 'ChangeSubTitle' %>
+  <%= card_header title: 'Delete ChangeModelDisplay' %>
+  <%= card_body do %> 
+    
+    <p>Are you sure you want to delete this ChangeModelDisplay? This action cannot be undone.</p>
+    
+    <div class="pt-2 flex justify-end">
+      <%= content_tag('A', 'Cancel', class: 'btn btn-secondary mr-2 mb-1', data: { action: 'click->modal#hide' }) %>
+      <%= link_to('Delete ChangeModelDisplay', ChangePath(account, ChangeModel), data: { turbo_method: :delete }, class: 'btn btn-danger mb-1') %>
+    </div>
+  <% end %> 
+<% end %> 

@@ -1,0 +1,30 @@
+<%# DeleteThis - NOTE accordion is also included in the dropdown mapping so if you ever change the structure of this make sure to review other mappings that use accordions (if any) %>
+<%# DeleteThis - use this one if you want the whole title bar to toggle the accordion %>
+<div data-controller="accordion">
+  <div class="flex items-center" data-action="click->accordion#toggle">
+    <span>ChangeTitle</span>
+    <div class="ml-auto flex items-center">
+      <i data-accordion-target="chevronDown" class="fa-solid fa-chevron-down"></i>
+      <i data-accordion-target="chevronUp" class="hidden fa-solid fa-chevron-up"></i>
+    </div>
+  </div>
+  <div class="hidden" data-accordion-target="accordionBody">
+    <%# DeleteThis - insert html elemnts here to fill the accordion body %>
+  </div>
+</div>
+
+<%# DeleteThis - use this one if you only want the chevrons to toggle the accordion %>
+<div data-controller="accordion">
+  <div class="flex items-center">
+    <span>ChangeTitle</span>
+    <div class="ml-auto flex" data-action="click->accordion#toggle">
+      <div class="ml-auto flex items-center">
+        <i data-accordion-target="chevronDown" class="fa-solid fa-chevron-down"></i>
+        <i data-accordion-target="chevronUp" class="hidden fa-solid fa-chevron-up"></i>
+      </div>
+    </div>
+  </div>
+  <div class="hidden" data-accordion-target="accordionBody">
+    <%# DeleteThis - insert html elemnts here to fill the accordion body %>
+  </div>
+</div>

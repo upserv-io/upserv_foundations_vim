@@ -1,0 +1,26 @@
+<div class="form-group left-label">
+  <%# DeleteThis - change left label width as needed but make sure all inputs on form match %>
+  <%# DeleteThis - add class justify-start to make label align left instead of right %>
+  <div class="left-label-container w-20">
+    <%= f.label :ChangeLabel, 'ChangeLabelDisplay:' %>
+  </div>
+  <div class="left-label-input">
+    <%# DeleteThis - default for group of checkboxes is inline. To make stacked, remmove class inline to div below (or add inline-no-wrap for no wrapping) %>
+    <div class="checkable-group-container inline">
+      <%# DeleteThis - duplicate checkbox-and-errors-container as needed, or if only one checkbox is needed and no label, then simply keep one checkable-container and remove the label %>
+      <div class="checkbox-and-errors-container">
+        <div class="checkable-container">
+          <%= f.check_box :ChangeAttribute,
+            class: 'form-control',
+            autofocus: ChangeOrRemove,
+            # DeleteThis - only include checked if value cannot be automated from the form model
+            checked: ChangeOrRemove,
+            disabled: ChangeOrRemove
+          %>
+          <%= f.label :ChangeAttribute, 'ChangeAttributeDisplay', class: 'checkable-left' %>
+        </div>
+        <%= f.inline_errors :ChangeAttribute %>
+      </div>
+    </div>
+  </div>
+</div>

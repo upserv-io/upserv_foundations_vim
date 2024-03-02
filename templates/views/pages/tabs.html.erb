@@ -1,0 +1,14 @@
+<%# DeleteThis - add class "primary" to get primary color styled tabs %>
+<%# DeleteThis - tabs wrap by default. If you need them to not wrap, remove class flex-wrap below %>
+<%= tabs class: 'flex-wrap' do %>
+  <%# DeleteThis - Default Example %>
+  <%= tab_item text: 'ChangeText',
+               # DeleteThis - icon is opitonal
+               icon: 'fa-ChangeIcon',
+               url: ChangePath,
+               class: "#{' current' if ChangeLogic }" %>
+  <%# DeleteThis - Block Example  %>
+  <%= tab_item class: "#{' current' if ChangeLogic }" do %>
+    <%# DeleteThis - insert stuff %>
+  <% end %>
+<% end %>

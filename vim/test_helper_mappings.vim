@@ -1,0 +1,2 @@
+" Tests Helper BAse
+nnoremap <silent> ,thba :call CreateBaseFile(1, 1, 1)<return>/outer_followup<return>cgnrequire 'test_helper'<esc>o<esc>/class<return>A < ActionView::TestCase<esc>/ChangeTopLevelDocumentation<return><down>^wviwy/ChangeTopLevelDocumentation<return>viwpbiTest for <esc>0/Test<return>ncgn<esc>:call IndentTemplateFrom('inner_followup', 'test/helpers/base.rb')<return>/DeleteThis\\|ChangeMethod<return>

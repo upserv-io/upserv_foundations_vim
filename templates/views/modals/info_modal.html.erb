@@ -1,0 +1,10 @@
+<%= modal id: "ChangeModel-#{object.id}-ChangeSubControllerNameOrRemoveThis-ChangeActionOrDescription-modal" do %>
+  <%# DeleteThis - add subtitle with this option - subtitle: 'ChangeSubTitle' %>
+  <%= card_header title: 'ChangeHeader' %>
+  <%= card_body do %> 
+    <p>ChangeInfo.</p>
+    <div class="pt-2 flex justify-end">
+      <%= content_tag('A', 'OK', class: 'btn', data: { action: 'click->modal#hide' }) %>
+    </div>
+  <% end %> 
+<% end %> 

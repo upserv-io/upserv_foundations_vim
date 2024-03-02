@@ -1,0 +1,19 @@
+<% provide(:sub_title, 'ChangeSubTitle') %>
+<%# DeleteThis - include top_bar_nav or remove this %>
+<% provide(:top_bar_nav, 'ChangeTopBarNav') %>
+<%# DeleteThis - delete below or add custom width if needed (default is 2500px) %>
+<%# @page_max_width = '100%' %>
+<%= add_template_streams %>
+
+<%# DeleteThis - page_header and page_body should never be rendered in partials 
+    because if you render in a partial, you might be tempted to re-render via ajax however, 
+    this doesn't work well with page_header and page_body because we are setting the width using
+    provide and yield which will not be available when rendering via ajax %>
+<%# DeleteThis - for custom header, use: ,hphe (Html Card HEader) %>
+<%= page_header title: 'ChangeTitle', subtitle: 'ChangeSubTitle' %>
+
+<%= page_body do %>
+<% end %>
+
+<div id="modals">
+</div>

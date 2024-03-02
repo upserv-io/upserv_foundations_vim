@@ -1,0 +1,48 @@
+<%# DeleteThis - options:
+  stacked: [true / false] - defaults to false
+    false (default) - sets card max height to 100% so card content scrolls within card body rather than page body
+    true - sets card max height to none so that cards scroll with page rather than on card body
+  max_height: any max-height css value; defaults to 100%
+  min_height: any min-height css value; defaults to auto
+  height: any height css value; defaults to auto
+  width_class: any tailwind classes; defaults to nil. Mainly used to customize inline cards in rare cases
+%>
+<%= table_card do %>
+  <%# DeleteThis - for custom header, use: ,hcth (Html Card Table Header) %>
+  <%= table_card_header title: 'ChangeTitle', subtitle: 'ChangeSubTitle' %>
+  <%= table_card_body do %>
+    <%# DeleteThis - class: 'no-alternate' removes alternating row colors %>
+    <%= table do %>
+      <%= table_head do %>
+        <%#
+          DeleteThis - manually set the widths to ALL th elements
+          If you don't set the width, then it will shink to nothing on mobile / small screens
+          NOTE: width will actually work like min width. It will not go lower than what you set but
+                it will expand until the card hits the page_max_width
+                so when testing widths, always test on page with width small enough so that table
+                overflows-y
+          NOTE: as the table shrinks, td texts will bet truncated and "..." will be added so that rows
+                all say the same height. To prevent this, you need to add: 
+                 thead_options: { class: 'no-ellipsis' }
+        %>
+        <th style="width: ChangeWidthrem">ChangeColumnHeader</th>
+        <%# DeleteThis - center align looks nice when all the data is the same length (ex. ID or maybe a date format) %>
+        <th style="text-align: center; width: ChangeWidthrem">ChangeColumnHeader</th>
+      <% end %>
+      <%# DeleteThis - "ChangeResources do |ChangeResource|" below is optional and can be replace with an "each" block or other enum block inside of the table_body block instead %>
+      <%= table_body ChangeResources do |ChangeResource| %>
+        <tr>
+          <td>
+            ChangeTableDataContents
+          </td>
+          <td>
+            <div class="flex justify-center">
+              ChangeTableDataContents
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+  <% end %>
+<% end %>

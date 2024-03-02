@@ -1,0 +1,16 @@
+<%# DeleteThis - if form does not use an instance of a active record model, then:
+    replace model: with scope:
+    add value: option to inputs as needed
+    or replace "f.inline_errors" with "inline_errors" or remove entirely
+%>
+<%= form_with model: ChangeModel, url: ChangePath(account, ChangeModel), method: :ChangeHtmlMethod do |f| %>
+  <%# DeleteThis - insert hidden fields here if necessary %>
+
+  <%# DeleteThis - insert form groups (or fields for if necessary) %>
+
+  <%# DeleteThis - NOTE: turboframe submit buttons added by default. Replace with  %>
+  <div class="form-submit-buttons">
+    <%= link_to 'Cancel', ChangePath(account, ChangeModel), class: 'btn btn-secondary mr-2' %>
+    <%= f.submit 'ChangeSubmitToAddForNewOrSaveForUpdate', class: 'btn' %>
+  </div>
+<% end %>

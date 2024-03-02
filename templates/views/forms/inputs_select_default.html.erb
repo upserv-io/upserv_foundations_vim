@@ -1,0 +1,16 @@
+<%= f.select(
+  :ChangeMethod,
+  # DeleteThis - even if object.attribute has a value, the selected value must be set manually.
+  # Typically options_for_select is the best option (,hios) or options for enum (,hioe) or options grouped (,hiog)
+  ChangeOptionsList,
+  # DeleteThis - for select with default, set inlude blank to false. This means the only options that will appear will be the options from the options list. If a valueis selected then that value will be selected when the page loads. If no value is selected,
+  # then the first option from the options list will be selected as the "default" option
+  { include_blank: false },
+  {
+    class: 'form-control',
+    autofocus: ChangeOrRemove,
+    disabled: ChangeOrRemove,
+    multiple: ChangeOrRemove,
+    readonly: ChangeOrRemove,
+  })
+%>

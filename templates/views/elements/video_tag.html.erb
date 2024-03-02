@@ -1,0 +1,23 @@
+<%# DeleteThis - you can replace url_for(ChangeModel.ChangeAttachment) with any video url %>
+<%# DeleteThis - common CSS:
+      parent with set height and width, and image with
+        object-contain
+        object-cover
+        other object-fit options (https://tailwindcss.com/docs/object-fit)
+      classic "cover image"
+        make parent width 100% and max-height of some value
+        make image object-cover
+      what else?
+%>
+<%= video_tag url_for(ChangeModel.ChangeAttachment),
+  class: 'ChagneOrRemove',
+  controls: ChangeOrRemove, # Boolean; displays playback controls (play/pause, volume, seek bar, etc.) for the video.
+  controlslist: ChangeOrRemove, # Specifies the set of controls to be shown in the UI. Options include "nodownload" (hide the download button), "nofullscreen" (hide the fullscreen button), "nodownload nofullscreen" (hide both buttons), or "nodownload", "nofullscreen" (hide each button individually).
+  autoplay: ChangeOrRemove,
+  loop: ChangeOrRemove,
+  poster: url_for(ChangeModel.ChangeAttachment.preview({})), # Specifies an image that is displayed as a placeholder or preview before the video starts playing.
+  muted: ChangeOrRemove, 
+  height: ChagneOrRemove,
+  width: ChagneOrRemove
+  # DeleteThis - NOTE: video tags do not use alt attribute like image tags do
+%> 

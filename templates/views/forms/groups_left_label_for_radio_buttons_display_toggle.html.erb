@@ -1,0 +1,44 @@
+<div class="form-group left-label">
+  <%# DeleteThis - change left label width as needed but make sure all inputs on form match %>
+  <%# DeleteThis - add class justify-start to make label align left instead of right %>
+  <div class="left-label-container w-20">
+    <%= f.label :ChangeLabel, 'ChangeLabelDisplay:' %>
+  </div>
+  <div class="left-label-input">
+    <%# DeleteThis - default for group of radio buttons is inline. To make stacked, remmove class inline to div below (or add inline-no-wrap for no wrapping) %>
+    <div class="checkable-group-container inline" data-controller="form--radio-display-toggle">
+      <%# DeleteThis - duplicate checkable-container as needed %>
+      <div class="checkable-container">
+        <%= f.radio_button :ChangeAttribute, ChangeValue,
+          id: :ChangeAttribute_ChangeValue,
+          class: 'form-control',
+          # DeleteThis - any HTML element with this show class will be shown when this option
+          # is checked and hidden when not checked. You can also add a hide_class data attribute
+          # that hides any HTML element when this option is checked and will show the element when
+          # this option is not checked, however the hide_class data-attribute is usually not needed
+          data: { show_class: 'ChangeShowClass1', hide_class: 'ChangeHideClass' },
+          autofocus: ChangeOrRemove,
+          # DeleteThis - only include checked if value cannot be automated from the form model
+          checked: ChangeOrRemove,
+          disabled: ChangeOrRemove,
+          required: ChangeOrRemove
+        %>
+        <%= f.label :ChangeAttribute, 'ChangeDisplay', value: ChangeValue, class: 'checkable-left' %>
+      </div>
+    </div>
+    <%= f.inline_errors :ChangeAttribute %>
+  </div>
+</div>
+
+<%# DeleteThis - add clsses, logic and data-dispaly to elements as neeeded (the below are simply examples)
+  also, make sure to add loggic so that these divs are hidden on page load unless their
+  corresponding radio button is checked %>
+<div class="ChangeShowClass1<%= " hidden" unless ChangeLogicForChecked %>" data-display="ChangeDefaultDisplayWhenNotHidden">
+</div>
+<div class="ChangeHideClass<%= " hidden" unless ChangeLogicForUnChecked %>" data-display="ChangeDefaultDisplayWhenNotHidden">
+</div>
+<%# DeleteThis - for nested %>
+<div class="ChangeParentShowClass<%= " hidden" unless ChangeLogicForChecked %>" data-display="ChangeDefaultDisplayWhenNotHidden">
+  <div class="ChangeNestedShowClass<%= " hidden" unless ChangeLogicForChecked %>" data-display="ChangeDefaultDisplayWhenNotHidden">
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<%= modal id: "ChangeModel-#{ChangeModel.id}-ChangeSubControllerNameOrRemoveThis-ChangeActionOrDescription-modal" do %>
+  <%= content_tag 'DIV', nil, id: "ChangeModalId-flash", class: 'flash-messages' %>
+  <%# DeleteThis - add subtitle with this option - subtitle: 'ChangeSubTitle' %>
+  <%= card_header title: 'ChangeHeader' %>
+  <%= card_body do %> 
+    <%# DeleteThis - if form does not use an instance of a active record model, then:
+        replace model: with scope:
+        add value: option to inputs as needed
+        or replace "f.inline_errors" with "inline_errors" or remove entirely
+    %>
+    <%= form_with model: ChangeModel, url: ChangePath(account, ChangeModel), method: :ChangeHtmlMethod do |f| %>
+      <%# DeleteThis - insert hidden fields here if necessary %>
+
+      <%# DeleteThis - insert form groups (or fields for if necessary) %>
+
+      <div class="form-submit-buttons">
+        <%# DeleteThis - NOTE: giving button a type of "button" prevents submitting the form (which is exactly what we want for the cancel button) %>
+        <button type="button" class="btn btn-secondary mr-2 mb-1" data-action="click->modal#hide">Cancel</button>
+        <%= f.submit 'ChangeSubmitToAddForNewOrSaveForUpdate', class: 'btn mb-1' %>
+      </div>
+    <% end %> 
+  <% end %> 
+<% end %>

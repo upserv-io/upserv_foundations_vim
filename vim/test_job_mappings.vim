@@ -1,0 +1,2 @@
+" Tests Job BAse
+nnoremap <silent> ,tjba :call CreateBaseFile(1, 1, 1)<return>/outer_followup<return>cgnrequire 'test_helper'<esc>o<esc>/class<return>A < ActiveJob::TestCase<esc>/ChangeTopLevelDocumentation<return><down>^wviwy/ChangeTopLevelDocumentation<return>viwpbiTest for <esc>0/Test<return>ncgn<esc>/inner_followup<return>cgn<esc>:call IndentTemplate('test/jobs/base.rb')<return>/DeleteThis\\|ChangeJob\\|ChangeJobClass\\|ChangeArgs<return>

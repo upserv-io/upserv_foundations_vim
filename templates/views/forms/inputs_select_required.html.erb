@@ -1,0 +1,18 @@
+<%= f.select(
+  :ChangeMethod,
+  # DeleteThis - even if object.attribute has a value, the selected value must be set manually.
+  # Typically options_for_select is the best option (,hios) or options for enum (,hioe) or options grouped (,hiog)
+  ChangeOptionsList,
+  # DeleteThis - prompt is best when a selection is required and the user needs to be promptedto make a selection. If object.attribute is nil, prompt will add an option to the beginningof the list with value="". However, if object.attribute has a value, then prompt will not
+  # add an option to the beginning. If object.attribute is nil and then a selection is made,
+  # the prompt will remain. The prompt is only removed if the object is saved and the select element is re-rendered (via ajax or re-reloading the page)
+  { prompt: 'Select' },
+  {
+    class: 'form-control',
+    required: true,
+    autofocus: ChangeOrRemove,
+    disabled: ChangeOrRemove,
+    multiple: ChangeOrRemove,
+    readonly: ChangeOrRemove,
+  })
+%>

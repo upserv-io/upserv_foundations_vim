@@ -1,0 +1,62 @@
+<%# DeleteThis - NOTE drop down is also included in the tab mapping so if you ever change the structure of this make sure to review other mappings that use dropdowns (if any) %>
+<%= dropdown do %>
+  <%= dropdown_button do %>
+    <%# DeleteThis - insert link / button / icon / etc. %>
+  <% end %>
+  <%= dropdown_items do %>
+    <%# DeleteThis - NOTE by default, anytime the screen is clicked, the dropdown items will be
+        closed. If you want to keep the dropdown items open after clicking a speciic item, add
+        the "keep-dropdown-on-click" class to the dropdown item (ex. see accordion below)
+    %>
+    <%# DeleteThis - Simple Link Example %>
+    <%= dropdown_item(
+      text: 'ChangeDisplay',
+      url: ChangePath,
+      # DeleteThis - if you want to show that a certain item is the current selection, add "current" class
+      class: "#{'current' if ChangeLogic}"
+    ) %>
+    
+    <%# DeleteThis - Filter example %>
+    <%= dropdown_item(
+      text: 'ChangeDisplay',
+      url: ChangePath(ChangePathArgs, filter(ChangeFilterType: 'ChangeFilterValue')),
+      class: "#{'current' if ChangeLogic}"
+    ) %>
+  
+    <%# DeleteThis - Block Example %>
+    <%# DeleteThis - if you want to show that a certain item is the current selection, add "current" class %>
+    <%# DeleteThis - NOTE: I'm not sure if the current css styles will be applied to the block or not. This
+        hasn't been testted yet %>
+    <%= dropdown_item class: "#{'current' if ChangeLogic}" do %>
+      <%# DeleteThis - insert custom HTML %>
+    <% end %>
+    
+    <%# DeleteThis - Accordion Example %>
+    <div class="keep-dropdown-on-click" data-controller="accordion">
+      <div data-action="click->accordion#toggle">
+        <%# DeleteThis - NOTE accordion is a drop down item with additional drop down items underneath it so don't include class
+            "current" and logic here but rather in drop down items below %>
+        <%= dropdown_item do %>
+          <div class="flex">
+            <span class="link">ChangeDisplay</span>
+            <div class="ml-2 flex items-center">
+              <i data-accordion-target="chevronDown" class="text-primary fa-solid fa-chevron-down"></i>
+              <i data-accordion-target="chevronUp" class="hidden text-primary fa-solid fa-chevron-up"></i>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="hidden" data-accordion-target="accordionBody">
+        <div>
+          <% dropdown_item(
+            text: 'ChangeDisplay',
+            url: ChangePath,
+            # DeleteThis - if you want to show that a certain item is the current selection, add "current" class
+            class: "#{'current' if ChangeLogic}"
+          ) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
