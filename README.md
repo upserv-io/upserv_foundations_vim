@@ -1,4 +1,4 @@
-Clone repo to dotfile in home directory
+Clone repo to dotfile in home directory:
 ```
 git clone git@github.com:upserv-io/upserv_foundations_vim.git ~/.upserv_foundations_vim
 ```
