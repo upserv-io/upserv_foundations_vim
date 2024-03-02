@@ -8,12 +8,12 @@ Add language specific mappiings to vimrc:
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
 
 ```
-Alternatively include all vim mappings 
+Alternatively include all vim mappings:
 ```
 " Include all upserv_foundations_vim mappings 
 so ~/.upserv_foundations_vim/vim/manifest.vim
 ```
-Or select vim mappings manually
+Or select vim mappings manually:
 ```
 " Include upserv_foundations_vim autocommands and settings
 so ~/.upserv_foundations_vim/vim/autocommands_and_settings.vim
@@ -24,7 +24,7 @@ so ~/.upserv_foundations_vim/vim/space_mappings.vim
 " Include upserv_foundations_vim language specific / Rails / 'comma' mappings
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
 ```
-If necessary, you can customize the location. Ex
+If necessary, you can customize the location. Ex:
 
 `$ git clone git@github.com:upserv-io/upserv_foundations_vim.git ~/some/other/directory`
 
