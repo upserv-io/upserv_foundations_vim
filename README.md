@@ -35,5 +35,5 @@ let g:path_to_upserv_foundations_vim = '~/some/other/directory/'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/comma_mappings.vim'
 
 ```
-Test if the mappings work: [Docs](https://docs.google.com/document/d/1uyoPw_LIjcsbw_QvuuX9uQ2OYkEvPnCtWa6CIOnQpyI/dit)
+Test if the mappings work: [Docs](https://docs.google.com/document/d/1uyoPw_LIjcsbw_QvuuX9uQ2OYkEvPnCtWa6CIOnQpyI)
 
