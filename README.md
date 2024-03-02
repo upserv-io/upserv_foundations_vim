@@ -30,3 +30,4 @@ execute 'source' g:path_to_upserv_foundations_vim . 'vim/space_mappings.vim'
 " Include language specific / Rails / 'comma' mappings
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/comma_mappings.vim'
 ```
+5. Test if the mapping work
