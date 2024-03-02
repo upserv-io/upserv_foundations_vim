@@ -25,8 +25,13 @@ so ~/.upserv_foundations_vim/vim/space_mappings.vim
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
 ```
 If necessary, you can customize the location. Ex
+
+`$ git clone git@github.com:upserv-io/upserv_foundations_vim.git ~/some/other/directory`
+
+vim RC:
 ```
-let g:path_to_upserv_foundations_vim = '~/.upserv_foundations_vim/'
+" NOTE: make sure to end with "/"
+let g:path_to_upserv_foundations_vim = '~/some/other/directory/' 
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/comma_mappings.vim'
 
 ```
