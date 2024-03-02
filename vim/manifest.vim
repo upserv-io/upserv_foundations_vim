@@ -1,3 +1,8 @@
+" Check if the variable is not defined before setting it
+if !exists("g:path_to_upserv_foundations_vim")
+  let g:path_to_upserv_foundations_vim = '~/.upserv_foundations_vim/'
+endif
+
 " autocommands and settings
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/autocommands_and_settings.vim'
 
