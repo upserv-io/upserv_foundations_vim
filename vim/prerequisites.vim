@@ -1,3 +1,8 @@
+" Check if the variable is not defined before setting it
+if !exists("g:path_to_upserv_foundations_vim")
+  let g:path_to_upserv_foundations_vim = '~/.upserv_foundations_vim/'
+endif
+
 " this probably needs to be cleaned. Idk if all of these are still used
 
 " get current file

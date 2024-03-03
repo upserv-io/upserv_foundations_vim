@@ -1,8 +1,3 @@
-" Check if the variable is not defined before setting it
-if !exists("g:path_to_upserv_foundations_vim")
-  let g:path_to_upserv_foundations_vim = '~/.upserv_foundations_vim/'
-endif
-execute 'source' g:path_to_upserv_foundations_vim . 'vim/shared_functions.vim'
 " Language specific / Rails / 'comma' mappings
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/app_controller_mappings.vim'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/app_channel_mappings.vim'
