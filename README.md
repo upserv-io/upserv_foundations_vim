@@ -17,15 +17,11 @@ so ~/.upserv_foundations_vim/vim/manifest.vim
 ```
 Or select vim mappings manually:
 ```
-" Include upserv_foundations_vim Prerequisites
+" Include selected upserv_foundations_vim mappings
 so ~/.upserv_foundations_vim/vim/prerequisites.vim
-" Include upserv_foundations_vim autocommands and settings
 so ~/.upserv_foundations_vim/vim/autocommands_and_settings.vim
-" Include upserv_foundations_vim vim mappings (non-comma, non-space, shared)
 so ~/.upserv_foundations_vim/vim/vim_mappings.vim
-" Include upserv_foundations_vim vim / 'space' mappings
 so ~/.upserv_foundations_vim/vim/space_mappings.vim
-" Include upserv_foundations_vim language specific / Rails / 'comma' mappings
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
 ```
 If necessary, you can customize the location. Ex:
