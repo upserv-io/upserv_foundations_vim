@@ -28,7 +28,7 @@ Vim:
 ```
 :so ~/.vimrc
 ```
-# Alternative options
+# Alternate options
 Alternatively include all vim mappings:
 ```
 " Include all upserv_foundations_vim mappings 
