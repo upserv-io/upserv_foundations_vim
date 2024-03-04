@@ -8,8 +8,8 @@ Add language specific mappiings to vimrc:
 " Include upserv_foundations_vim language specific comma mappings
 so ~/.upserv_foundations_vim/vim/prerequisites.vim
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
-
 ```
+Test if the mappings work: [Docs](https://docs.google.com/document/d/1uyoPw_LIjcsbw_QvuuX9uQ2OYkEvPnCtWa6CIOnQpyI)
 # Alternative options
 Alternatively include all vim mappings:
 ```
@@ -41,4 +41,3 @@ let g:path_to_upserv_foundations_vim = '~/some/other/directory/'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/comma_mappings.vim'
 
 ```
-Test if the mappings work: [Docs](https://docs.google.com/document/d/1uyoPw_LIjcsbw_QvuuX9uQ2OYkEvPnCtWa6CIOnQpyI)
