@@ -1,4 +1,20 @@
-" functinos for the file edit mappitns
+" create a function that takes a file name and checks if there are any windows
+" open with that file name. If there are, it will go to that window. If not,
+" then it will open a new window with that file name
+function FileEditSpecificFile(file, split_window)
+  let windows = filter(range(1, winnr('$')), 'winbufnr(v:val) == bufnr("' . a:file . '")')
+  if len(windows) > 0
+    execute windows[0] . 'wincmd w'
+  else
+    if a:split_window == 1
+      call WindowSplitVerdically()
+    endif
+    execute ':e' a:file
+  endif
+endfunction
+
+"
+" " functinos for the file edit mappitns
 function FileEditClipBoad()
   let split = split(@+, ':')
   let file = split[0]
@@ -43,6 +59,8 @@ function FileEditChild(split_window)
   let l:current_file = expand('%')
   if match(l:current_file, '_controller\.rb$') != -1
     call FileEditChildController(a:split_window)
+  elseif match(l:current_file, '_helper\.rb$') != -1
+    call FileEditChildHelper(a:split_window)
   else
     call FileEditChildRegular(a:split_window)
   endif
@@ -57,7 +75,7 @@ function FileEditChildRegular(split_window)
     endif
     execute ':Explore' directory_of_children
   else
-    let new_file = input("There are no child files yet. Create the first one!: " . directory_of_children . "/")
+    let new_file = input("There are no nested files yet. Create the first one!: " . directory_of_children . "/")
     if new_file == ''
       execute "normal! :echo"
     else
@@ -112,7 +130,33 @@ function FileEditChildController(split_window)
     endif
     execute ':Explore' directory_of_children
   else
-    let new_file = input("There are no child controller files yet. Create the first one!: " . directory_of_children . "/")
+    let new_file = input("There are no nested controller files yet. Create the first one!: " . directory_of_children . "/")
+    if new_file == ''
+      if a:split_window == 1
+        call WindowSplitVerdically()
+      endif
+      execute "normal! :echo"
+    else
+      if a:split_window == 1
+        call WindowSplitVerdically()
+      endif
+      execute ":e " . directory_of_children . "/" . new_file
+    endif
+  endif
+endfunction
+
+function FileEditChildHelper(split_window)
+  let current_file = expand('%')
+  " remove 7 characters for _helper so that ex. jobs_helper
+  " becomes jobs
+  let directory_of_children = split(current_file, '\.')[0][0:-7]
+  if isdirectory(directory_of_children)
+    if a:split_window == 1
+      call WindowSplitVerdically()
+    endif
+    execute ':Explore' directory_of_children
+  else
+    let new_file = input("There are no nested helper files yet. Create the first one!: " . directory_of_children . "/")
     if new_file == ''
       if a:split_window == 1
         call WindowSplitVerdically()

@@ -1,9 +1,12 @@
 " App Controllers Base for Template controller
-nnoremap <silent> ,acbt :call CreateBaseFile(1, 0, 1)<return>/ChangeTopLevelDocumentation<return>cgnParent controller for ChangeDescription<esc>/class<return>A < ChangeInheritance<esc>/inner_followup<return>cgn<esc>:call IndentTemplate('controllers/base_parent.rb')<return>/ChangeDescription\\|DeleteThis\\|ChangeInheritance<return>
+nnoremap <silent> ,acbt :call CreateBaseFile(1, 0, 1)<return>/ChangeTopLevelDocumentation<return>cgnTemplate controller for ChangeDescription<esc>/class<return>A < ChangeInheritance<esc>/inner_followup<return>cgn<esc>:call IndentTemplate('controllers/base_template.rb')<return>/ChangeDescription\\|DeleteThis\\|ChangeInheritance<return>
 " App Controllers Base for Nested controller
 nnoremap <silent> ,acbn :call CreateBaseFile(1, 0, 1)<return>/ChangeTopLevelDocumentation<return>cgnCollectionMemborOrChild controller for ChangeDescription<esc>/class<return>A < ChangeInheritance<esc>/inner_followup<return>cgn<esc>:call IndentTemplate('controllers/base_child.rb')<return>/ChangeDescription\\|DeleteThis\\|ChangeInheritance\\|CollectionMemborOrChild<return>
 " App Controllers Base Broadcasts file
 nnoremap <silent> ,acbb :call CreateBaseFile(0, 0, 0)<return>/ChangeTopLevelDocumentation<return>cgnBroadcasts for<esc><up>g_viwy<down>A <esc>pa controller<esc>
+
+" App Controllers Index HTML
+nnoremap <silent> ,acih :call IndentTemplate('controllers/actions/index_html.rb')<return>/ChangeAbility\\|ChangeResources\\|ChangeQuery\\|DeleteThis<return>
 
 " App Controllers Create Broadcast
 nnoremap <silent> ,accb :call IndentTemplate('controllers/actions/create_broadcast.rb')<return>/ChangeModelDisplay\\|ChangeModel\\|ChangeAbility\\|DeleteThis\\|ChangeControllerName\\|ChangeScope\\|ChangePermittedAttributes<return>
