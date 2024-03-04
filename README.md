@@ -26,7 +26,6 @@ $ git pull
 ```
 Vim:
 ```
-,m
 :so ~/.vimrc
 ```
 # Alternative options
