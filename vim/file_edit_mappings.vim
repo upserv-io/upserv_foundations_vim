@@ -1,7 +1,7 @@
 " Functional based on purpose
 " File Edit Children
-nnoremap <silent> <space>fech :call FileEditChild(1)<return>
-nnoremap <silent> <space>fecH :call FileEditChild(0)<return>
+nnoremap <silent> <space>fene :call FileEditChild(1)<return>
+nnoremap <silent> <space>fenE :call FileEditChild(0)<return>
 " File Edit Parent
 nnoremap <silent> <space>fepa :call FileEditParent(1)<return>
 nnoremap <silent> <space>fepA :call FileEditParent(0)<return>
