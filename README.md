@@ -5,9 +5,10 @@ git clone git@github.com:upserv-io/upserv_foundations_vim.git ~/.upserv_foundati
 ```
 Add language specific mappiings to vimrc:
 ```
-" Include upserv_foundations_vim language specific comma mappings
+" Include upserv_foundations_vim language specific comma mappings and vim general space mappings
 so ~/.upserv_foundations_vim/vim/prerequisites.vim
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
+so ~/.upserv_foundations_vim/vim/space_mappings.vim
 ```
 Test if the mappings work: [Docs](https://docs.google.com/document/d/1uyoPw_LIjcsbw_QvuuX9uQ2OYkEvPnCtWa6CIOnQpyI)
 # Alternative options
@@ -23,6 +24,7 @@ Or select vim mappings manually:
 so ~/.upserv_foundations_vim/vim/prerequisites.vim
 so ~/.upserv_foundations_vim/vim/autocommands_and_settings.vim
 so ~/.upserv_foundations_vim/vim/vim_mappings.vim
+so ~/.upserv_foundations_vim/vim/space_mappings_simple.vim
 so ~/.upserv_foundations_vim/vim/space_mappings.vim
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
 ```

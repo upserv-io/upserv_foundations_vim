@@ -47,8 +47,8 @@ nnoremap <silent> <space>ferE :e README.md<return>
 nnoremap <silent> <space>fero :call WindowSplitVerdically()<return>:e config/routes.rb<return>
 nnoremap <silent> <space>ferO :e config/routes.rb<return>
 " File Edit STyles
-nnoremap <silent> <space>fest :call FileEditeStyle()<return>
-nnoremap <silent> <space>fest :call FileEditeStyle()<return>
+nnoremap <silent> <space>fest :call FileEditeStyle(1)<return>
+nnoremap <silent> <space>fesT :call FileEditeStyle(0)<return>
 " File Edit VIew
 nnoremap <silent> <space>fevi :call FileEditView(1)<return>
 nnoremap <silent> <space>fevI :call FileEditView(0)<return>
