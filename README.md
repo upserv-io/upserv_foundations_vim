@@ -19,6 +19,16 @@ so ~/.upserv_foundations_vim/vim/comma_mappings.vim
 so ~/.upserv_foundations_vim/vim/space_mappings.vim
 ```
 Test if the mappings work: [Docs](https://docs.google.com/document/d/1uyoPw_LIjcsbw_QvuuX9uQ2OYkEvPnCtWa6CIOnQpyI)
+# Updating
+Terminal:
+```
+$ git pull
+```
+Vim:
+```
+,m
+:so ~/.vimrc
+```
 # Alternative options
 Alternatively include all vim mappings:
 ```

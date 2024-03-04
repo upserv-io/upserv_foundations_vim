@@ -1,4 +1,4 @@
-" Vim mappings (non-comma, non-space, shared)
+" Vim mappings (non-comma, non-space)
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/vim_mappings.vim'
 
 " Vim / 'space' mappings - less than 4 characters

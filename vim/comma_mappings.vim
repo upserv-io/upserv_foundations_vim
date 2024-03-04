@@ -13,7 +13,6 @@ execute 'source' g:path_to_upserv_foundations_vim . 'vim/html_modal_mappings.vim
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/html_page_mappings.vim'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/html_show_mappings.vim'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/html_ui_mappings.vim'
-execute 'source' g:path_to_upserv_foundations_vim . 'vim/misc_space_mappings.vim'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/ruby_mappings.vim'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/test_mappings.vim'
 execute 'source' g:path_to_upserv_foundations_vim . 'vim/test_controller_mappings.vim'
