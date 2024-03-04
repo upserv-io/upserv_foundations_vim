@@ -1,3 +1,4 @@
+# Get started
 Clone repo to dotfile in home directory:
 ```
 git clone git@github.com:upserv-io/upserv_foundations_vim.git ~/.upserv_foundations_vim
@@ -9,6 +10,7 @@ so ~/.upserv_foundations_vim/vim/prerequisites.vim
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
 
 ```
+# Alternative options
 Alternatively include all vim mappings:
 ```
 " Include all upserv_foundations_vim mappings 
@@ -24,7 +26,9 @@ so ~/.upserv_foundations_vim/vim/vim_mappings.vim
 so ~/.upserv_foundations_vim/vim/space_mappings.vim
 so ~/.upserv_foundations_vim/vim/comma_mappings.vim
 ```
-If necessary, you can customize the location. Ex:
+# Customize location of clone
+If necessary, you can customize the location.
+Terminal:
 
 ```
 $ git clone git@github.com:upserv-io/upserv_foundations_vim.git ~/some/other/directory
