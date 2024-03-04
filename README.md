@@ -22,7 +22,6 @@ Or select vim mappings manually:
 ```
 " Include selected upserv_foundations_vim mappings
 so ~/.upserv_foundations_vim/vim/prerequisites.vim
-so ~/.upserv_foundations_vim/vim/autocommands_and_settings.vim
 so ~/.upserv_foundations_vim/vim/vim_mappings.vim
 so ~/.upserv_foundations_vim/vim/space_mappings_simple.vim
 so ~/.upserv_foundations_vim/vim/space_mappings.vim
