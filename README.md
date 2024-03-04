@@ -1,9 +1,9 @@
 # Overview
-A bunch of vim mappings that help working with Rails apps
+Vim mappings that help working with Rails apps using Upserv components and architecture
 
-Most mappings are either "comma" or "space" followed 4 keystrokes
+Most mappings are either "comma" or "space" followed 4 keystrokes. Ex:
 
-,acbt (App Controllers Base Template) - creates a base controller file. Ex:
+,acbt (App Controllers Base Template) - creates a base controller file
 
 \<space\>feco (File Edit COntroller) - opens the corresponding controller file (based on the current window) in a new window (meaning if you are on a view and press <space>feco it will open the controller file for that view)
 # Get started
