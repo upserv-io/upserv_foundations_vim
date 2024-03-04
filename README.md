@@ -1,7 +1,10 @@
 # Overview
-A bunch of vim mappings specific that help working with Rails apps
+A bunch of vim mappings that help working with Rails apps
+
 Most mappings are either "comma" or "space" followed 4 keystrokes
+
 ex. ,acbt (App Controllers Base Template) - creates a base controller file
+
 ex. <space>feco (File Edit COntroller) - opens the corresponding controller file (based on the current window) in a new window (meaning if you are on a view and press <space>feco it will open the controller file for that view)
 # Get started
 Clone repo to dotfile in home directory:
