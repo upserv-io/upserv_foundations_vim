@@ -7,8 +7,8 @@ test '#create' do
   post ChangePath(account),
        params: { ChangeParam: { ChangeParam: ChangeParam } }
   assert_response :success
-  ChangeInstance = ChangeModel.last
   assert_equal count + 1, ChangeModel.count
+  ChangeInstance = ChangeModel.last
   assert_equal ChangeValue, ChangeInstance.ChangeMethod
 end
 
