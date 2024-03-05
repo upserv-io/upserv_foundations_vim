@@ -1,10 +1,9 @@
 def create
-  load_ChangeModel
   # DeleteThis - use this for grouped permissions
-  authorize! :ChangeAbility, @ChangeModel
+  authorize! :ChangeAbility, current_account
   # DeleteThis - use this for granular controller action permissions
-  authorize_controller_action! @ChangeModel
-  @ChangeModel.create(create_params) ? render_create : render_invalid_create
+  authorize_controller_action! current_account
+  @ChangeInstance = ChangeResource.create(create_params) ? render_create : render_invalid_create
 end
 
 private
@@ -19,7 +18,7 @@ def render_create
   #              user B's experience. Closing modal should only close the current
   #              user's modal, not others
   replace_ChangeControllerName_new_modal
-  broadcast_flash_success 'ChangeModelDisplay created'
+  broadcast_flash_success 'ChangeInstanceDisplay created'
   # DeleteThis - render other items as needed.
   # DeleteThis - remember to re-render any other modals associated
   #              because modals are rendered from the bottom of the
@@ -29,10 +28,10 @@ end
 
 def render_invalid_create
   # DeleteThis - if not coming from modal
-  broadcast_flash_danger @ChangeModel
+  broadcast_flash_danger @ChangeInstance
   # DeleteThis - if coming from modal
-  broadcast_flash_danger @ChangeModel,
-                         target: "ChangeModel-#{@ChangeModel.id}-new-modal-flash"
+  broadcast_flash_danger @ChangeInstance,
+                         target: "ChangeInstance-#{@ChangeInstance.id}-new-modal-flash"
   # DeleteThis - render other items as needed.
 end
 

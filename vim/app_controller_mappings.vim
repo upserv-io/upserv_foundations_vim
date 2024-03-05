@@ -9,7 +9,7 @@ nnoremap <silent> ,acbb :call CreateBaseFile(0, 0, 0)<return>/ChangeTopLevelDocu
 nnoremap <silent> ,acih :call IndentTemplate('controllers/actions/index_html.rb')<return>/ChangeAbility\\|ChangeResources\\|ChangeQuery\\|DeleteThis<return>
 
 " App Controllers Create Broadcast
-nnoremap <silent> ,accb :call IndentTemplate('controllers/actions/create_broadcast.rb')<return>/ChangeModelDisplay\\|ChangeModel\\|ChangeAbility\\|DeleteThis\\|ChangeControllerName\\|ChangeScope\\|ChangePermittedAttributes<return>
+nnoremap <silent> ,accb :call IndentTemplate('controllers/actions/create_broadcast.rb')<return>/ChangeInstanceDisplay\\|ChangeInstance\\|ChangeResource\\|ChangeAbility\\|DeleteThis\\|ChangeControllerName\\|ChangeScope\\|ChangePermittedAttributes<return>
 " App Controllers Update Broadcast
 nnoremap <silent> ,acub :call IndentTemplate('controllers/actions/update_broadcast.rb')<return>/ChangeModelDisplay\\|ChangeModel\\|ChangeAbility\\|DeleteThis\\|ChangeControllerName\\|ChangeScope\\|ChangePermittedAttributes<return>
 " App Controllers Update Turboframe
