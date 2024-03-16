@@ -1,21 +1,5 @@
 include FactoryBot::Syntax::Methods
 
-test '#valid?' do
-  assert build(:ChangeModel).valid?
-end
-
-test '#destroy' do
-  ChangeModel = create(:ChangeModel)
-  # insert test to do what you expect
-  # example: raise an error if you it's protected
-  # success if not protected
-  # children destroyed if children
-  # children nil if nilable reference
-  # etc.
-  ChangeModel.destroy
-  assert_raise(ActiveRecord::RecordNotFound) { ChangeModel.reload }
-end
-
 # DeleteThis - we typically do not test:
 #   constants
 #   attributes
@@ -23,16 +7,31 @@ end
 #   scopes
 #   anything in the private section (should be tested by testing association)
 # we typically do test:
-#   single valid
+#   validations
 #   destroy (this will take into account dependent destroy on has_many / has_one)
-#   basically everyhting else
+#   basically everything else
 
-####---- Class Methods ----####
+# ---- Class Methods ---- #
 
-####---- Callbacks ----####
+# ---- Callbacks ---- #
 
-####---- Validations & DB Constraints ----####
+# ---- Validations & DB Constraints ---- #
+test '#valid?' do
+  assert build(:ChangeModel).valid?
+end
 
-####---- Services ----####
+# ---- Instance Methods ---- #
 
-####---- Instance Methods ----####
+# ---- Destroying ---- #
+test '#destroy' do
+  ChangeModel = create(:ChangeModel)
+  # DeleteThis:
+  # test to do what you expect
+  # example: assert it's deleted if deleting is allowed
+  # assert it's not deleted if not allowed
+  # assert children destroyed if there are children that need to be destroyed
+  # assert foreign key in children set to nil if it's a nilable reference
+  # etc.
+  ChangeModel.destroy
+  assert_raise(ActiveRecord::RecordNotFound) { ChangeModel.reload }
+end
