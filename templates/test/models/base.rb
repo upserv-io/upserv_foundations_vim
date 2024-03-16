@@ -20,6 +20,18 @@ test '#valid?' do
   assert build(:ChangeModel).valid?
 end
 
+context 'basic validations' do
+  # DeleteThis: add set up if testing uniqueness because
+  # uniqueness saves to the database but it forgets to use
+  # factory bot which then raises an excpeption because of the
+  # not null database constraint
+  setup do
+    @ChangeModel = create(:ChangeModel)
+  end
+
+  should validate_ChangeValidation
+end
+
 # ---- Instance Methods ---- #
 
 # ---- Destroying ---- #
