@@ -17,3 +17,5 @@ nnoremap <silent> <space>tT :call ToggleTerminalInWindow(4, 0)<return>
 " Terminal mode mappings
 " make <esc> work as expected (ie send to normal mode)
 tnoremap <Esc> <C-\><C-n>
+" make jj esc
+tnoremap <silent> jj <C-\><C-n>
