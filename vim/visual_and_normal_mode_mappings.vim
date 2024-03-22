@@ -11,8 +11,6 @@
 
 
 " single key non-comma
-" make jj esc
-  nnoremap <silent> jj <esc>
   " make > & < in normal mode the same as visual mode
   nnoremap <silent> > v><right><right><<esc>
   nnoremap <silent> < v<<left><left><esc>

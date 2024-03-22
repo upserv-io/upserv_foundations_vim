@@ -1,3 +1,5 @@
+" make jj esc
+inoremap <silent> jj <esc>
 " autofill
 inoremap <silent> <C-space> <C-n>
 " prevent return from autocomplete (very annoying because to return you have
