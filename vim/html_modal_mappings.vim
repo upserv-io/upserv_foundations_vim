@@ -11,6 +11,7 @@ nnoremap <silent> ,hmis a<%# DeleteThis - use ,heil to see list of available ico
 nnoremap <silent> ,hmij a<%# DeleteThis - use ,heil to see list of available icons %><return><i class="link no-underline fa-solid fa-pen-to-square" <%= ChangeHelperMethod %>></i><esc>/DeleteThis\\|ChangeHelperMethod<return>
 " Html Modal Icon trigger Destroy
 nnoremap <silent> ,hmid a<i class="link no-underline link-danger fa-solid fa-trash-can" data-target-modal="ChangeModalId"></i><esc>/ChangeModalId<return>
+nnoremap <silent> ,hmid a<%= content_tag 'I', nil, class: 'link no-underline link-danger fa-solid fa-trash-can', data: { target_modal: "ChangeModalId" } %><esc>/ChangeModalId<return>
 " Html Modal Button trigger Static
 nnoremap <silent> ,hmbs a<%= content_tag 'BUTTON', 'ChangeAction', class: 'btn', type: 'button', data: { target_modal: "ChangeModalId" } %><esc>/ChangeAction\\|ChangeModalId<return>
 " Html Modal Button trigger Javascrtip dynamic

@@ -14,9 +14,8 @@
       <%# DeleteThis - insert form groups (or fields for if necessary) %>
 
       <div class="form-submit-buttons">
-        <%# DeleteThis - NOTE: giving button a type of "button" prevents submitting the form (which is exactly what we want for the cancel button) %>
-        <button type="button" class="btn btn-secondary mr-2 mb-1" data-action="click->modal#hide">Cancel</button>
-        <%= f.submit 'ChangeSubmitToAddForNewOrSaveForUpdate', class: 'btn mb-1' %>
+        <button type="button" class="btn btn-secondary" data-action="click->modal#hide">Cancel</button>
+        <%= f.submit 'AddOrSave', class: 'btn' %>
       </div>
     <% end %> 
   <% end %> 
