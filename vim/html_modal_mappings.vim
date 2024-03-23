@@ -17,7 +17,7 @@ nnoremap <silent> ,hmbs a<%= content_tag 'BUTTON', 'AddOrSave', class: 'btn', ty
 nnoremap <silent> ,hmbj a<button type="button" class="btn" <%= ChangeHelperMethod %>>AddOrSave</button><esc>/ChangeHelperMethod\\|AddOrSave<return>
 " Html Modal Button trigger Destroy
 nnoremap <silent> ,hmbd a<button type="button" class="btn btn-danger" data-target-modal="ChangeModalId">Delete ChangeObject</button><esc>/ChangeObject\\|ChangeSubControllerNameOrRemoveThis\\|ChangeModel<return>
-nnoremap <silent> ,hmbd a<%= content_tag 'BUTTON', 'Delete ChangeObject', class: 'btn', type: 'button', data: { target_modal: "ChangeModalId" } %><esc>/ChangeObject\\|ChangeSubControllerNameOrRemoveThis\\|ChangeModel<return>
+nnoremap <silent> ,hmbd a<%= content_tag 'BUTTON', 'Delete ChangeObject', class: 'btn btn-danger', type: 'button', data: { target_modal: "ChangeModalId" } %><esc>/ChangeObject\\|ChangeSubControllerNameOrRemoveThis\\|ChangeModelId<return>
 " Html Modal Link trigger Static
 nnoremap <silent> ,hmls a<%= content_tag 'A', 'AddOrSave', class: 'link', data: { target_modal: "ChangeModalId" } %><esc>/ChangeModalId\\|AddOrSave<return>
 " Html Modal Link trigger Javascrtip dynamic
