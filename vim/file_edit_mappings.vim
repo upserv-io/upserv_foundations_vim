@@ -45,6 +45,9 @@ nnoremap <silent> <space>fer# :call FileEditSpecificFile('README.md', 0)<return>
 " File Edit ROutes
 nnoremap <silent> <space>fero :call FileEditSpecificFile('config/routes.rb', 1)<return> 
 nnoremap <silent> <space>ferO :call FileEditSpecificFile('config/routes.rb', 0)<return> 
+" File Edit SEeds
+nnoremap <silent> <space>fese :call FileEditSpecificFile('db/seeds.rb', 1)<return>
+nnoremap <silent> <space>fesE :call FileEditSpecificFile('db/seeds.rb', 0)<return>
 " File Edit STyles
 nnoremap <silent> <space>fest :call FileEditeStyle(1)<return>
 nnoremap <silent> <space>fesT :call FileEditeStyle(0)<return>

@@ -19,6 +19,7 @@ nnoremap <silent> <space>ffut :e app/utilities/**/*
 nnoremap <silent> <space>ffvi :e app/views/**/*
 
 " outside app
+nnoremap <silent> <space>ffdb :e db/**/*
 nnoremap <silent> <space>fffa :e test/factories/**/*
 nnoremap <silent> <space>ffrs :e spec/**/*
 nnoremap <silent> <space>ffte :e test/**/*
